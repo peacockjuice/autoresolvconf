@@ -5,7 +5,7 @@ f = open(file,'r')
 filedata = f.read()
 f.close()
 
-newdata = filedata.replace("nameserver 127.0.0.53","nameserver 10.3.0.2\nnameserver 127.0.0.53\n")
+newdata = filedata.replace("nameserver %X-ip%","nameserver %Y-ip%\nnameserver %X-ip%\n")
 
 f = open(file,'w')
 f.write(newdata)
